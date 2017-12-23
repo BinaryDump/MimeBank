@@ -69,6 +69,13 @@ namespace MimeBank
 			new FileHeader(FileType.Video, "wmv", "30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C"),
 			new FileHeader(FileType.Video, "avi", "52 49 46 46 ?? ?? ?? ?? 41 56 49 20 4C 49 53 54"),
 			new FileHeader(FileType.Video, "mkv", "1A 45 DF A3"),
+
+            //exe files
+            new FileHeader(FileType.Other, "exe", "4D 5A"),
+            new FileHeader(FileType.Other, "exe", "7F 45 4C 46"), // elf include in .exe
+            new FileHeader(FileType.Other, "exe" , "53 5A 44 44 88 F0 27 33") //Microsoft compressed file in Quantum format, used prior to Windows XP. File can be decompressed using Extract.exe or Expand.exe distributed with earlier versions of Windows.
+        
+
 		};
 	}
 }
